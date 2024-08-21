@@ -1,10 +1,288 @@
+/* Fonts:
+  font-family: 'Karla Variable', sans-serif;
+  font-family: 'Markazi Text Variable', serif;
+*/
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.navbar {
-  margin-left: 100px;
-  font-family: q
+html {
+  scroll-behavior: smooth;
 }
 
+/* Applies to all buttons (all two of them, lol) */
+.button {
+  font-family: 'Karla Variable', sans-serif;
+  padding: 5pt 20pt 5pt 20pt;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  width: fit-content;
+  border-radius: 16px;
+  background-color:#F4CE14;
+}
+.button:hover {
+  background-color:#ad982d;
+}
+
+/* Nav Bar */
+.navbar {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 20pt;
+}
+.navbar a {
+  font-size: 20pt;
+  font-weight: bold;
+  font-family: 'Karla Variable', sans-serif;
+  margin: 10pt;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template: 1fr / 10% 1fr 1fr 10%;
+  margin-top: 20pt;
+  margin-bottom: 40pt;
+  background-color: #495E57;
+}
+.heroArticle {
+  grid-column: 2;
+}
+.heroTitle {
+  font-family: 'Markazi Text Variable', serif;
+  font-size: 64pt;
+  margin-top: 20pt;
+  color: #F4CE14;
+  line-height: 64pt;
+}
+.heroLocation {
+  line-height: 10pt;
+  font-family: 'Markazi Text Variable', serif;
+  font-size: 40pt;
+  color: #FFFFFF;
+}
+.heroDescription {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 18pt;
+  margin-top: 20pt;
+  color:#FFFFFF;
+  width: 60%;
+}
+.heroImage {
+  grid-column: 3;
+  position: relative;
+  top: 40pt;
+  border-radius: 16px;
+  width: 350pt;
+}
+
+/* Specials */
+.specials {
+  display: grid;
+  grid-template: ". hd . bt ." auto
+                 ". s1 s2 s3 ." 1fr
+                 / 10% 1fr 1fr 1fr 10%;
+  margin-top: 60pt;
+}
+.specialsTitle {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 40pt;
+  grid-area: hd;
+}
+.specialsButton {
+  grid-area: bt;
+}
+.special1 {
+  grid-area: s1;
+}
+.special2 {
+  grid-area: s2;
+}
+.special3 {
+  grid-area: s3;
+}
+.specialCard {
+  margin: auto 20pt;
+  background-color: #EDEFEE;
+  border-radius: 16px;
+}
+.specialImage {
+  height: 300px;
+  border-radius: 16px;
+  border: 1px solid #000000;
+}
+.specialHeader  {
+  display: flex;
+}
+.specialTitle {
+  flex: 1;
+  margin-left: 10pt;
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+}
+.specialPrice {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 16pt;
+  color: #EE9972;
+  margin-right: 10pt;
+}
+.specialDescription {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 16pt;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  height: 120pt;
+}
+.specialFooter {
+  display: flex;
+}
+.specialDeliveryText {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+  margin-left: 10pt;
+  margin-top: 5pt;
+  margin-bottom: 15pt;
+}
+.specialDeliveryText:hover {
+  text-decoration: underline;
+}
+.specialDeliveryIcon {
+  margin-left: 10pt;
+  margin-top: 10pt;
+  height: 16pt;
+}
+
+/* Testimonials */
+.testimonials {
+  display: grid;
+  grid-template: ". t1 t2 t3 t4 ." auto / 10% 1fr 1fr 1fr 1fr 10%;
+  margin-top: 50pt;
+  background-color: #495E57;
+}
+.testimonial1 {
+  grid-area: t1;
+}
+.testimonial2 {
+  grid-area: t2;
+}
+.testimonial3 {
+  grid-area: t3;
+}
+.testimonial4 {
+  grid-area: t4;
+}
+.testimonialCard {
+  margin: 50pt 20pt;
+  padding-top: 10pt;
+  padding-left: 10pt;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+.userRating {
+  display: flex;
+  margin: 5pt;
+}
+.userImage {
+  height: 100pt;
+  display: inline-block;
+  vertical-align: middle;
+}
+.userName {
+  display: inline-block;
+  margin-left: 5pt;
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+}
+.userReview {
+  margin: 5pt;
+  height: 50pt;
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 14pt;
+}
+
+/* About */
+.about {
+  display: grid;
+  grid-template: ". a1 a2 ." auto / 10% 1fr 1fr 10%;
+  margin-bottom: 20pt;;
+}
+.aboutTitle {
+  font-family: 'Markazi Text Variable', serif;
+  font-size: 64pt;
+  margin-top: 20pt;
+  line-height: 64pt;
+}
+.aboutLocation {
+  line-height: 10pt;
+  font-family: 'Markazi Text Variable', serif;
+  font-size: 40pt;
+}
+.aboutDescription {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 16pt;
+  margin-top: 20pt;
+}
+.aboutText {
+  grid-area: a1;
+}
+.aboutImages {
+  grid-area: a2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+}
+.aboutImage1 {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  padding-top: 30%;
+  z-index: 1;
+}
+.aboutImage2 {
+  grid-column: 3 / span 3;
+  grid-row: 1;
+  padding-top: 10%;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template: ". . f1 . f2 f3 f4 . ." auto / 10% 90pt 1fr 30pt 1fr 1fr 1fr 90pt 10%;
+  padding-top: 20pt;
+  padding-bottom: 20pt;
+  background-color: #D9D9D9;
+}
+.footerImage {
+  grid-area: f1;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  height: 250pt;
+}
+.footerLinks {
+  grid-area: f2;
+}
+.footerContact {
+  grid-area: f3;
+}
+.footerSocials {
+  grid-area: f4;
+}
+.footerTitle {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 24pt;
+  font-weight: bold;
+}
+.footerText {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 24pt;
+}
+.footerText:hover {
+  text-decoration: underline;
+}

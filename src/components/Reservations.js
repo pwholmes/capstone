@@ -1,6 +1,6 @@
 function Reservations() {
     return (
-        <section>
+        <section id="reservations" className="reservations">
             Reservations
         </section>
     )
