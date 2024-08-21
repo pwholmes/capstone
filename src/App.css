@@ -216,7 +216,7 @@ html {
 .about {
   display: grid;
   grid-template: ". a1 a2 ." auto / 10% 1fr 1fr 10%;
-  margin-bottom: 20pt;;
+  margin-bottom: 20pt;
 }
 .aboutTitle {
   font-family: 'Markazi Text Variable', serif;
@@ -285,13 +285,52 @@ html {
   font-size: 24pt;
   font-weight: bold;
 }
-.footerText {
+.footerLink {
   font-family: 'Karla Variable', sans-serif;
   font-size: 24pt;
 }
-.footerText:link {
+.footerLink:link {
   text-decoration: none;
 }
-.footerText:hover {
+.footerLink:hover {
   text-decoration: underline;
+}
+
+.reservations {
+  margin-top: 10pt;
+  padding-top: 20pt;
+  padding-bottom: 20pt;
+  background-color: #495E57;
+}
+.resTitle {
+  font-family: 'Markazi Text Variable', serif;
+  font-size: 64pt;
+  font-weight: bold;
+  margin-left: 10%;
+  color: #F4CE14;
+}
+.resSubheading {
+  font-family: 'Markazi Text Variable', serif;
+  font-size: 40pt;
+  font-weight: bold;
+}
+.resInputGroup {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20pt;
+  border: 1px solid #000000;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  padding: 5pt 20pt 20pt 20pt;
+}
+.resText {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 24pt;
+}
+.resLabel {
+  width: 300pt;
+  display: inline-block;
+}
+.resInput {
+  margin-top: 10pt;
 }
