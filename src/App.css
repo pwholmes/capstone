@@ -305,9 +305,9 @@ html {
 }
 
 .reservations {
-  margin-top: 10pt;
-  padding-top: 20pt;
-  padding-bottom: 20pt;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   background-color: #495E57;
 }
 .resTitle {
@@ -325,20 +325,20 @@ html {
 .resInputGroup {
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 20pt;
+  margin-top: 2rem;
   border: 1px solid #000000;
   border-radius: 16px;
   background-color: #FFFFFF;
-  padding: 5pt 20pt 20pt 20pt;
+  padding: 0.5rem 2rem 2rem 2rem;
 }
 .resText {
   font-family: 'Karla Variable', sans-serif;
   font-size: 24pt;
 }
 .resLabel {
-  width: 300pt;
+  width: 20rem;
   display: inline-block;
 }
 .resInput {
-  margin-top: 10pt;
+  margin-top: 1rem;
 }
