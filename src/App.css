@@ -36,7 +36,10 @@ html {
   font-size: 20pt;
   font-weight: bold;
   font-family: 'Karla Variable', sans-serif;
-  margin: 10pt;
+  margin: 15pt;
+}
+.navbar a:link {
+  text-decoration: none;
 }
 .navbar a:hover {
   text-decoration: underline;
@@ -138,7 +141,7 @@ html {
   font-size: 16pt;
   margin-left: 10pt;
   margin-right: 10pt;
-  height: 120pt;
+  min-height: 120px;
 }
 .specialFooter {
   display: flex;
@@ -191,22 +194,22 @@ html {
   margin: 5pt;
 }
 .userImage {
-  height: 100pt;
   display: inline-block;
+  height: 100pt;
   vertical-align: middle;
 }
 .userName {
   display: inline-block;
-  margin-left: 5pt;
   font-family: 'Karla Variable', sans-serif;
   font-size: 16pt;
   font-weight: bold;
+  margin-left: 5pt;
 }
 .userReview {
-  margin: 5pt;
-  height: 50pt;
   font-family: 'Karla Variable', sans-serif;
   font-size: 14pt;
+  margin: 5pt;
+  min-height: 50pt;
 }
 
 /* About */
@@ -285,6 +288,9 @@ html {
 .footerText {
   font-family: 'Karla Variable', sans-serif;
   font-size: 24pt;
+}
+.footerText:link {
+  text-decoration: none;
 }
 .footerText:hover {
   text-decoration: underline;
