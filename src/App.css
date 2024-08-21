@@ -15,9 +15,8 @@ html {
 /* Applies to all buttons (all two of them, lol) */
 .button {
   font-family: 'Karla Variable', sans-serif;
-  padding: 5pt 20pt 5pt 20pt;
-  margin-top: 20pt;
-  margin-bottom: 20pt;
+  padding: 0.5rem 2rem;
+  margin: 2rem 0;
   width: fit-content;
   border-radius: 16px;
   background-color:#F4CE14;
@@ -47,11 +46,13 @@ html {
 
 /* Hero Section */
 .hero {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #495E57;
+}
+.heroContainer {
   display: grid;
   grid-template: 1fr / 10% 1fr 1fr 10%;
-  margin-top: 20pt;
-  margin-bottom: 40pt;
-  background-color: #495E57;
 }
 .heroArticle {
   grid-column: 2;
@@ -59,20 +60,19 @@ html {
 .heroTitle {
   font-family: 'Markazi Text Variable', serif;
   font-size: 64pt;
-  margin-top: 20pt;
+  margin-top: 2rem;
   color: #F4CE14;
-  line-height: 64pt;
 }
 .heroLocation {
-  line-height: 10pt;
   font-family: 'Markazi Text Variable', serif;
   font-size: 40pt;
   color: #FFFFFF;
+  line-height: 0;
 }
 .heroDescription {
   font-family: 'Karla Variable', sans-serif;
   font-size: 18pt;
-  margin-top: 20pt;
+  margin-top: 2rem;
   color:#FFFFFF;
   width: 60%;
 }
@@ -86,11 +86,13 @@ html {
 
 /* Specials */
 .specials {
+  margin-top: 5rem;
+}
+.specialsContainer {
   display: grid;
   grid-template: ". hd . bt ." auto
                  ". s1 s2 s3 ." 1fr
                  / 10% 1fr 1fr 1fr 10%;
-  margin-top: 60pt;
 }
 .specialsTitle {
   font-family: 'Karla Variable', sans-serif;
@@ -110,7 +112,7 @@ html {
   grid-area: s3;
 }
 .specialCard {
-  margin: auto 20pt;
+  margin: 1rem;
   background-color: #EDEFEE;
   border-radius: 16px;
 }
@@ -125,23 +127,25 @@ html {
 }
 .specialTitle {
   flex: 1;
-  margin-left: 10pt;
   font-family: 'Karla Variable', sans-serif;
   font-size: 18pt;
   font-weight: bold;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
 }
 .specialPrice {
   font-family: 'Karla Variable', sans-serif;
   font-size: 16pt;
   color: #EE9972;
-  margin-right: 10pt;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
 }
 .specialDescription {
   font-family: 'Karla Variable', sans-serif;
   font-size: 16pt;
-  margin-left: 10pt;
-  margin-right: 10pt;
-  min-height: 120px;
+  margin: 1rem;
+  height: 8rem;
+  overflow-y: auto;
 }
 .specialFooter {
   display: flex;
@@ -150,89 +154,90 @@ html {
   font-family: 'Karla Variable', sans-serif;
   font-size: 16pt;
   font-weight: bold;
-  margin-left: 10pt;
-  margin-top: 5pt;
-  margin-bottom: 15pt;
+  margin: 1rem;
 }
 .specialDeliveryText:hover {
   text-decoration: underline;
 }
 .specialDeliveryIcon {
-  margin-left: 10pt;
-  margin-top: 10pt;
-  height: 16pt;
+  margin: 1rem 0;
+  height: 1.5rem;
 }
 
 /* Testimonials */
 .testimonials {
-  display: grid;
-  grid-template: ". t1 t2 t3 t4 ." auto / 10% 1fr 1fr 1fr 1fr 10%;
   margin-top: 50pt;
   background-color: #495E57;
 }
-.testimonial1 {
+.tesContainer {
+  display: grid;
+  grid-template: ". t1 t2 t3 t4 ." auto / 10% 1fr 1fr 1fr 1fr 10%;
+}
+.tes1 {
   grid-area: t1;
 }
-.testimonial2 {
+.tes2 {
   grid-area: t2;
 }
-.testimonial3 {
+.tes3 {
   grid-area: t3;
 }
-.testimonial4 {
+.tes4 {
   grid-area: t4;
 }
-.testimonialCard {
-  margin: 50pt 20pt;
-  padding-top: 10pt;
-  padding-left: 10pt;
+.tesCard {
+  margin: 5rem 1rem;
+  padding: 1rem;
   background-color: #FFFFFF;
   border-radius: 16px;
 }
-.userRating {
+.tesUserRating {
   display: flex;
-  margin: 5pt;
 }
-.userImage {
+.tesUserImage {
   display: inline-block;
-  height: 100pt;
+  height: 6rem;
   vertical-align: middle;
+  margin-top: 0.5rem;
 }
-.userName {
+.tesUserName {
   display: inline-block;
   font-family: 'Karla Variable', sans-serif;
   font-size: 16pt;
   font-weight: bold;
-  margin-left: 5pt;
+  margin-left: 0.5rem;
 }
-.userReview {
+.tesUserReview {
   font-family: 'Karla Variable', sans-serif;
   font-size: 14pt;
-  margin: 5pt;
-  min-height: 50pt;
+  margin: 0.5rem;
+  min-height: 4rem;
+  overflow-y: auto;
 }
 
 /* About */
 .about {
+  margin-bottom: 3rem;
+}
+.aboutContainer {
   display: grid;
   grid-template: ". a1 a2 ." auto / 10% 1fr 1fr 10%;
-  margin-bottom: 20pt;
 }
 .aboutTitle {
   font-family: 'Markazi Text Variable', serif;
   font-size: 64pt;
-  margin-top: 20pt;
-  line-height: 64pt;
+  margin-top: 2rem;
 }
 .aboutLocation {
-  line-height: 10pt;
   font-family: 'Markazi Text Variable', serif;
   font-size: 40pt;
+  line-height: 0;
+  margin-bottom: 2rem;
 }
 .aboutDescription {
   font-family: 'Karla Variable', sans-serif;
   font-size: 16pt;
-  margin-top: 20pt;
+  margin-top: 1rem;
 }
 .aboutText {
   grid-area: a1;
@@ -242,33 +247,36 @@ html {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   position: relative;
+  margin-top: 1rem;
 }
 .aboutImage1 {
   grid-column: 1 / span 3;
   grid-row: 1;
-  width: 300px;
+  width: 15rem;
   padding-top: 30%;
   z-index: 1;
 }
 .aboutImage2 {
   grid-column: 3 / span 3;
   grid-row: 1;
-  width: 300px;
+  width: 15rem;
   padding-top: 10%;
 }
 
 /* Footer */
 .footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #D9D9D9;
+}
+.footerContainer {
   display: grid;
   grid-template: ". . f1 . f2 f3 f4 . ." auto / 10% 90pt 1fr 30pt 1fr 1fr 1fr 90pt 10%;
-  padding-top: 20pt;
-  padding-bottom: 20pt;
-  background-color: #D9D9D9;
 }
 .footerImage {
   grid-area: f1;
-  margin-top: 10pt;
-  margin-bottom: 10pt;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   height: 250pt;
 }
 .footerLinks {

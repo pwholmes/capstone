@@ -7,14 +7,14 @@ import emptyStar from '../assets/weui--star-outlined.svg';
 
 function TestimonialCard(props) {
     return (
-        <article className={"testimonialCard " + props.myClass}>
-            <div className="userRating">
+        <article className={"tesCard " + props.myClass}>
+            <div className="tesUserRating">
                 {[...Array(Number(props.rating))].map(()=> <img src={fullStar} alt="star" />)}
                 {[...Array(5 - props.rating)].map(()=> <img src={emptyStar} alt="empty star" />)}
             </div>
-            <img className="userImage" src={props.userImage} alt="User portrait"/>
-            <h1 className="userName">{props.userName}</h1>
-            <p className="userReview">{props.review}</p>
+            <img className="tesUserImage" src={props.userImage} alt="User portrait"/>
+            <h1 className="tesUserName">{props.userName}</h1>
+            <p className="tesUserReview">{props.review}</p>
         </article>
     );
 }
@@ -22,30 +22,32 @@ function TestimonialCard(props) {
 function Testimonials() {
     return (
         <section id="testimonials" className="testimonials">
-            <TestimonialCard
-                myClass="testimonial1"
-                rating="5"
-                userName="Elyssa"
-                userImage={user1}
-                review='"The greatest dining experience of my life."'/>
-            <TestimonialCard
-                myClass="testimonial2"
-                rating="3"
-                userName="Billy"
-                userImage={user2}
-                review='"Eh, it was okay I guess."'/>
-            <TestimonialCard
-                myClass="testimonial3"
-                rating="4"
-                userName="Lizzy"
-                userImage={user3}
-                review='"The Lemon Dessert was divine!"'/>
-            <TestimonialCard
-                myClass="testimonial4"
-                rating="4"
-                userName="Robert"
-                userImage={user4}
-                review='"I ate until my belly burst."'/>
+            <section className="tesContainer">
+                <TestimonialCard
+                    myClass="tes1"
+                    rating="5"
+                    userName="Elyssa"
+                    userImage={user1}
+                    review='"The greatest dining experience of my life."'/>
+                <TestimonialCard
+                    myClass="tes2"
+                    rating="3"
+                    userName="Billy"
+                    userImage={user2}
+                    review='"Eh, it was okay I guess."'/>
+                <TestimonialCard
+                    myClass="tes3"
+                    rating="4"
+                    userName="Lizzy"
+                    userImage={user3}
+                    review='"The Lemon Dessert was divine!"'/>
+                <TestimonialCard
+                    myClass="tes4"
+                    rating="4"
+                    userName="Robert"
+                    userImage={user4}
+                    review='"I ate until my belly burst."'/>
+            </section>
         </section>
     );
 }
