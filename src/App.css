@@ -304,41 +304,44 @@ html {
   text-decoration: underline;
 }
 
-.reservations {
+.bookPage {
   margin-top: 1rem;
   padding-top: 2rem;
   padding-bottom: 3rem;
   background-color: #495E57;
 }
-.resTitle {
+.bookTitle {
   font-family: 'Markazi Text Variable', serif;
   font-size: 64pt;
   font-weight: bold;
   margin-left: 10%;
   color: #F4CE14;
 }
-.resSubheading {
+.bookSubheading {
   font-family: 'Markazi Text Variable', serif;
   font-size: 40pt;
   font-weight: bold;
 }
-.resInputGroup {
+.bookInputGroup {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 2rem;
   border: 1px solid #000000;
   border-radius: 16px;
   background-color: #FFFFFF;
-  padding: 0.5rem 2rem 2rem 2rem;
+  padding: 0.5rem 2rem 1rem 2rem;
 }
-.resText {
+.bookText {
   font-family: 'Karla Variable', sans-serif;
   font-size: 24pt;
 }
-.resLabel {
+.bookLabel {
   width: 20rem;
   display: inline-block;
 }
-.resInput {
-  margin-top: 1rem;
+.bookInput {
+  margin-bottom: 1rem;
+}
+.bookButtonContainer {
+  text-align: center;
 }

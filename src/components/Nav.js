@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import logo from '../assets/Logo.svg';
 import Main from './Main';
-import Reservations from '../components/Reservations';
+import BookingPage from '../components/BookingPage';
 
 function Nav() {
     return (
@@ -11,13 +11,13 @@ function Nav() {
                 <Link to="/" className="nav-item">Home</Link>
                 <a href="#about">About</a>
                 <a href="#navbar">Menu</a>
-                <Link to="/reservations" className="nav-item">Reservations</Link>
+                <Link to="/booking" className="nav-item">Reservations</Link>
                 <a href="#navbar">Order Online</a>
                 <a href="#navbar">Login</a>
             </nav>
             <Routes>
                 <Route path="/" element={<Main />} />
-                <Route path="/reservations" element={<Reservations/>} />
+                <Route path="/booking" element={<BookingPage/>} />
             </Routes>
         </>
     );

@@ -11,7 +11,7 @@ function Footer() {
                     <Link to="/" className="footerLink">Home</Link><br/>
                     <a href="#about" className="footerLink">About</a><br/>
                     <a href="#footer" className="footerLink">Menu</a><br/>
-                    <Link to="/reservations" className="footerLink">Reservations</Link><br/>
+                    <Link to="/booking" className="footerLink">Reservations</Link><br/>
                     <a href="#footer" className="footerLink">Order Online</a><br/>
                     <a href="#footer" className="footerLink">Login</a><br/>
                 </article>

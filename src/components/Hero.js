@@ -9,7 +9,7 @@ function Hero() {
                     <h1 className="heroTitle">Little Lemon</h1>
                     <h2 className="heroLocation">Chicago</h2>
                     <p className="heroDescription">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                    <Link to="/reservations"><button className="button">Reserve a Table</button></Link>
+                    <Link to="/booking"><button className="button">Reserve a Table</button></Link>
                 </article>
                 <img className="heroImage" src={heroImage} alt="A sample of Little Lemon's menu" />
             </section>
