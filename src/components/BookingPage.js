@@ -1,4 +1,5 @@
 import Footer from "./Footer";
+import BookingForm from "./BookingForm";
 
 function BookingPage(props) {
     return (
