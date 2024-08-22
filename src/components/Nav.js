@@ -9,7 +9,7 @@ function Nav() {
             <nav id="navbar" className="navbar">
                 <img src={logo} width="256" alt="Little Lemon logo" />
                 <Link to="/" className="nav-item">Home</Link>
-                <a href="#about">About</a>
+                <a href="#navbar">About</a>
                 <a href="#navbar">Menu</a>
                 <Link to="/booking" className="nav-item">Reservations</Link>
                 <a href="#navbar">Order Online</a>

@@ -215,48 +215,48 @@ html {
   overflow-y: auto;
 }
 
-/* About */
-.about {
+/* "Chicago" section" */
+.chicago {
   margin-bottom: 3rem;
 }
-.aboutContainer {
+.chiContainer {
   display: grid;
   grid-template: ". a1 a2 ." auto / 10% 1fr 1fr 10%;
 }
-.aboutTitle {
+.chiTitle {
   font-family: 'Markazi Text Variable', serif;
   font-size: 64pt;
   margin-top: 2rem;
 }
-.aboutLocation {
+.chiLocation {
   font-family: 'Markazi Text Variable', serif;
   font-size: 40pt;
   line-height: 0;
   margin-bottom: 2rem;
 }
-.aboutDescription {
+.chiDescription {
   font-family: 'Karla Variable', sans-serif;
   font-size: 16pt;
   margin-top: 1rem;
 }
-.aboutText {
+.chiText {
   grid-area: a1;
 }
-.aboutImages {
+.chiImages {
   grid-area: a2;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   position: relative;
   margin-top: 1rem;
 }
-.aboutImage1 {
+.chiImage1 {
   grid-column: 1 / span 3;
   grid-row: 1;
   width: 15rem;
   padding-top: 30%;
   z-index: 1;
 }
-.aboutImage2 {
+.chiImage2 {
   grid-column: 3 / span 3;
   grid-row: 1;
   width: 15rem;
