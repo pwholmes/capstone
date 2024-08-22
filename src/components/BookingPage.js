@@ -55,7 +55,7 @@ function BookingForm(props) {
                 </section>
 
                 <section className="bookInputGroup">
-                    <h2 className="bookSubheading">Payment Info</h2>
+                    <h2 className="bookSubheading">Personal Info</h2>
 
                     <label className="bookText bookLabel" htmlFor="bookName">Name*</label>
                     <input className="bookText bookInput" id="bookName" type="text"  placeholder="Name" value={formData.name}
