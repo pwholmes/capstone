@@ -4,7 +4,7 @@ import Testimonials from './Testimonials'
 import Chicago from './Chicago'
 import Footer from './Footer'
 
-function Main() {
+function Homepage() {
     return (
         <>
             <Hero />
@@ -16,4 +16,4 @@ function Main() {
     );
 }
 
-export default Main;
+export default Homepage;

@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import logo from '../assets/Logo.svg';
-import Main from './Main';
+import Homepage from './Homepage';
 import BookingPage from '../components/BookingPage';
 
 function Nav() {
@@ -16,7 +16,7 @@ function Nav() {
                 <a href="#navbar">Login</a>
             </nav>
             <Routes>
-                <Route path="/" element={<Main />} />
+                <Route path="/" element={<Homepage />} />
                 <Route path="/booking" element={<BookingPage/>} />
             </Routes>
         </>
