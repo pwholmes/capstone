@@ -1,12 +1,10 @@
 import Footer from "./Footer";
 import {useState} from 'react';
 
-function BookingPage() {
-    const [availableTimes, setAvailableTimes] = useState(["11:00", "12:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00"])
-
+function BookingPage(props) {
     return (
         <>
-            <BookingForm availableTimes={availableTimes}/>
+            <BookingForm availableTimes={props.availableTimes} dispatcher={props.dispatcher}/>
             <Footer />
         </>
     )
@@ -29,13 +27,16 @@ function BookingForm(props) {
 
                     <label className="bookText bookLabel" htmlFor="bookDateInput">Date*</label>
                     <input className="bookText bookInput" id="bookDateInput" type="date" value={formData.date}
-                        onChange={(e) => setFormData(prevState => ({...prevState, date: e.target.value}))}/><br/>
+                        onChange={(e) => {
+                            props.dispatcher(e.target.value);
+                            return setFormData(prevState => ({...prevState, date: e.target.value}))
+                        }}/><br/>
 
                     <label className="bookText bookLabel" htmlFor="bookTimeInput">Time*</label>
                     <select className="bookText bookInput" id="bookTimeInput" value={formData.time}
                             onChange={(e) => setFormData(prevState => ({...prevState, time: e.target.value}))}>
                         <option value="">--select--</option>
-                        {props.availableTimes.map((time) => <option value={time}>{time}</option>)}
+                        {props.availableTimes.map((time,i) => <option key={i} value={time}>{time}</option>)}
                     </select><br/>
 
                     <label className="bookText bookLabel" htmlFor="bookNumGuestsInput">Number of guests*</label>

@@ -8,11 +8,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* Applies to all buttons (all two of them, lol) */
+/* Applies this style to all buttons */
 .button {
   font-family: 'Karla Variable', sans-serif;
   padding: 0.5rem 2rem;
@@ -28,8 +24,13 @@ html {
 /* Nav Bar */
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   margin-left: 10%;
-  margin-top: 20pt;
+  margin-top: 1rem;
+  align-items: center;
+}
+.navbar img {
+  height: 5rem;
 }
 .navbar a {
   font-size: 20pt;
