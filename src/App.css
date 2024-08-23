@@ -305,6 +305,7 @@
   text-decoration: underline;
 }
 
+/* Booking Form */
 .bookPage {
   margin-top: 1rem;
   padding-top: 2rem;
@@ -332,10 +333,6 @@
   background-color: #FFFFFF;
   padding: 0.5rem 2rem 1rem 2rem;
 }
-.bookInputGroup p {
-  font-family: 'Karla Variable', sans-serif;
-  font-size: 16pt;
-}
 .bookText {
   font-family: 'Karla Variable', sans-serif;
   font-size: 24pt;
@@ -345,7 +342,22 @@
   display: inline-block;
 }
 .bookInput {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.bookInputError {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 16pt;
+  color: red;
+}
+.bookEmail {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 16pt;
+  margin-top: 1rem;
+}
+.bookRequired {
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 16pt;
+  margin-top: 1rem;
 }
 .bookButtonContainer {
   text-align: center;
