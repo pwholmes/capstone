@@ -5,6 +5,9 @@ import Homepage from './Homepage';
 import BookingPage from '../components/BookingPage';
 import ConfirmedBooking from './ConfirmedBooking';
 
+// This API was copied over from the .js file on the remote website, since
+// I couldn't figure out how to make these functions callable from the <script>
+// section in the HTML.
 const seededRandom = function (seed) {
     var m = 2**35 - 31;
     var a = 185852;

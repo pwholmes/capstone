@@ -64,20 +64,23 @@ function BookingForm(props) {
                     <input className="bookText bookInput" id="bookName" type="text"  placeholder="Name" value={formData.name}
                         onChange={(e) => setFormData(prevState => ({...prevState, name: e.target.value}))} /><br/>
 
-                    <label className="bookText bookLabel" htmlFor="bookEmail">Email Address*</label>
+                    <label className="bookText bookLabel" htmlFor="bookEmail">Email Address</label>
                     <input className="bookText bookInput" id="bookEmail" type="email" placeholder="Email Address" value={formData.email}
                         onChange={(e) => setFormData(prevState => ({...prevState, email: e.target.value}))} /><br/>
 
+                    {/*
                     <label className="bookText bookLabel" htmlFor="bookCreditCardNum">Credit Card Number*</label>
                     <input className="bookText bookInput" id="bookCreditCardNum" type="string" placeholder="Credit Card Number" value={formData.ccNum}
                         onChange={(e) => setFormData(prevState => ({...prevState, ccNum: e.target.value}))} /><br/>
+                    */}
 
+                    <p>If you provide an email address, we will send you a reminder the day before your reservation.  The email address is not used for any other purpose.</p><br/>
                     <p>* indicates required field</p>
                     </section>
 
                 <section className="bookButtonContainer">
                     <button className="button bookConfirmButton" type="submit"
-                        disabled={(!formData.date || !formData.time || !formData.name || !formData.email || !formData.ccNum)}>Confirm</button>
+                        disabled={(!formData.date || !formData.time || !formData.name)}>Confirm</button>
                 </section>
             </form>
         </section>
