@@ -346,3 +346,25 @@
 .bookButtonContainer {
   text-align: center;
 }
+
+.confirmed {
+  background-color: #495E57;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+.confContainer {
+  margin: 0 10%;
+  justify-items: center;
+  border: 1px solid #000000;
+  border-radius: 16px;
+}
+.confText {
+  display: flex;
+  height: 10rem;
+  margin: 1rem;
+  font-family: 'Karla Variable', sans-serif;
+  font-size: 24pt;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}

@@ -1,11 +1,16 @@
 import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function BookingForm(props) {
-    const [formData, setFormData] = useState({date: "", time: "", numGuests: 1, event: "none", name: "", email: "", ccNum: ""});
+    const defaultFormData = {date: "", time: "", numGuests: 1, event: "none", name: "", email: "", ccNum: ""};
+    const [formData, setFormData] = useState(defaultFormData);
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        if (props.submitForm(formData)) {
+            navigate("/confirmed", {state: formData});
+        }
     }
 
     return (
@@ -16,7 +21,7 @@ function BookingForm(props) {
                     <h2 className="bookSubheading">Reservation Info</h2>
 
                     <label className="bookText bookLabel" htmlFor="bookDateInput">Date*</label>
-                    <input className="bookText bookInput" id="bookDateInput" type="date" value={formData.date}
+                    <input className="bookText bookInput" id="bookDateInput" type="date" value={formData.date} min={new Date()}
                         onChange={(e) => {
                             props.dispatcher(e.target.value);
                             return setFormData(prevState => ({...prevState, date: e.target.value}))

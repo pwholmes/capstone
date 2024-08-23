@@ -9,8 +9,8 @@ function TestimonialCard(props) {
     return (
         <article className={"tesCard " + props.myClass}>
             <div className="tesUserRating">
-                {[...Array(Number(props.rating))].map(()=> <img src={fullStar} alt="star" />)}
-                {[...Array(5 - props.rating)].map(()=> <img src={emptyStar} alt="empty star" />)}
+                {[...Array(Number(props.rating))].map((num,i)=> <img key={i} src={fullStar} alt="star" />)}
+                {[...Array(5 - props.rating)].map((num,i)=> <img key={i} src={emptyStar} alt="empty star" />)}
             </div>
             <img className="tesUserImage" src={props.userImage} alt="User portrait"/>
             <h1 className="tesUserName">{props.userName}</h1>
