@@ -1,6 +1,12 @@
 import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// Set the date ranges allowed for reservations.  We allow then up to 2 months in advance
+const now = new Date();
+const nowDate = now.toISOString().substring(0, 10);
+now.setMonth(now.getMonth() + 2);
+const laterDate = now.toISOString().substring(0, 10);
+
 function BookingForm(props) {
     const defaultFormData = {date: "", time: "", numGuests: 1, event: "none", name: "", email: "", ccNum: ""};
     const [formData, setFormData] = useState(defaultFormData);
@@ -15,16 +21,16 @@ function BookingForm(props) {
 
     return (
         <section className="bookPage">
-            <h1 className="bookTitle">Reservations</h1>
+        <h1 className="bookTitle">Reservations</h1>
             <form className="bookForm" onSubmit={handleSubmit}>
                 <section className="bookInputGroup">
                     <h2 className="bookSubheading">Reservation Info</h2>
 
                     <label className="bookText bookLabel" htmlFor="bookDateInput">Date*</label>
-                    <input className="bookText bookInput" id="bookDateInput" type="date" value={formData.date} min={new Date()}
+                    <input className="bookText bookInput" id="bookDateInput" type="date" value={formData.date} min={nowDate} max={laterDate}
                         onChange={(e) => {
                             props.dispatcher(e.target.value);
-                            return setFormData(prevState => ({...prevState, date: e.target.value}))
+                            return setFormData(prevState => ({...prevState, date: e.target.value, time: ""}))
                         }}/><br/>
 
                     <label className="bookText bookLabel" htmlFor="bookTimeInput">Time*</label>
@@ -48,6 +54,7 @@ function BookingForm(props) {
                         <option value="reuniom">Reunion</option>
                         <option value="other">Other</option>
                     </select>
+                    <p>* indicates required field</p>
                 </section>
 
                 <section className="bookInputGroup">
@@ -57,13 +64,15 @@ function BookingForm(props) {
                     <input className="bookText bookInput" id="bookName" type="text"  placeholder="Name" value={formData.name}
                         onChange={(e) => setFormData(prevState => ({...prevState, name: e.target.value}))} /><br/>
 
-                    <label className="bookText bookLabel" htmlFor="bookEmail">Email*</label>
+                    <label className="bookText bookLabel" htmlFor="bookEmail">Email Address*</label>
                     <input className="bookText bookInput" id="bookEmail" type="email" placeholder="Email Address" value={formData.email}
                         onChange={(e) => setFormData(prevState => ({...prevState, email: e.target.value}))} /><br/>
 
-                    <label className="bookText bookLabel" htmlFor="bookCreditCardNum">Credit card number*</label>
-                    <input className="bookText bookInput" id="bookCreditCardNum" type="text" placeholder="Credit Card Number" value={formData.ccNum}
+                    <label className="bookText bookLabel" htmlFor="bookCreditCardNum">Credit Card Number*</label>
+                    <input className="bookText bookInput" id="bookCreditCardNum" type="string" placeholder="Credit Card Number" value={formData.ccNum}
                         onChange={(e) => setFormData(prevState => ({...prevState, ccNum: e.target.value}))} /><br/>
+
+                    <p>* indicates required field</p>
                     </section>
 
                 <section className="bookButtonContainer">
